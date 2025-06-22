@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  background-color: #61472c;
+  color: #fff;
+
+  
+}
+header nav {
+  background-color: #212121;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+header nav h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+header nav form {
+  display: flex;
+  justify-content: center;
+}
+form input[type="text"] {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+form input[type="text"],
+button [type="Submit"] {
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+}
+form button[type="Submit"] {
+  background-color: #f44336;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
+form button[type="Submit"]:hover {
+  background-color: #ff5c5c;
+}
+/*main Section*/
+.recipe-container {
+  text-align: center;
+
+  /* margin-top: 20px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 40px;
+  width: 80%;
+  margin: 10px auto; /*10px (top,buttom) auto (left,right)*/
+  padding: 20px;
+  place-items: center;
+}
+
+.recipe {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1),
+    -5px -5px 10px rgba(34, 34, 34, 0.5);
+  cursor: pointer;
+  max-width: 350px;
+  transition: transform 0.3s ease-in-out;
+}
+.recipe:hover{
+transform: scale(1.02);
+}
+.recipe img {
+  height: 300px;
+}
+.recipe h3 {
+  font-size: 24px;
+  margin-block: 5px;
+}
+.recipe p {
+  font-size: 20px;
+  color: #4a4a4a;
+  margin: 5px 0;
+}
+.recipe button {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  margin: 18px auto;
+  background-color: #f44336;
+  color: #fff;
+}
+
+form button[type="Submit"]:hover,
+.recipe button:hover {
+  background-color: #ff5c5c;
+}
+/*Recipe Details*/
+.recipe-details {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #694c2f;
+  -webkit-transform: translate(-50%, -50%);
+  border-radius: 12px;
+  width: 30%;
+  height: 60%;
+  font-size: 20px;
+  transition: all 0.5s ease-in-out;
+  overflow-y: scroll;
+}
+
+.recipe-details-content {
+  padding: 30px;
+}
+
+.recipeName {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.ingredientList {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.recipeInstructions p {
+  line-height: 30px;
+  white-space: pre-line;
+}
+.recipeName,
+.ingredientList,
+.recipeInstructions {
+  margin-bottom: 20px;
+}
+.recipe-close-btn {
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #f44336;
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.recipe-close-btn:hover {
+  background-color: #ff5c5c;
+}
+/*Resposive code*/
+@media screen and (max-width: 600px) {
+  header nav {
+    flex-direction: column;
+  }
+  header nav form {
+    width: 80%;
+    margin-top: 20px;
+  }
+}
+/*footer*/
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo h2 {
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: #ff6f61;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  color: #aaa;
+}
